@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HONDERSHOP - Kullanıcı Paneli</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Yan Menü (Sidebar) */
+        .sidebar {
+            width: 250px;
+            background-color: #161b22;
+            border-right: 1px solid #30363d;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #58a6ff;
+            text-align: center;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .menu-item {
+            padding: 12px 15px;
+            color: #8b949e;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            transition: 0.3s;
+        }
+
+        .menu-item:hover, .menu-item.active {
+            background-color: #21262d;
+            color: #ffffff;
+        }
+
+        /* Ana İçerik Alanı */
+        .main-content {
+            flex: 1;
+            padding: 30px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #30363d;
+        }
+
+        .user-profile {
+            background-color: #161b22;
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 1px solid #30363d;
+            font-size: 14px;
+        }
+
+        /* Kartlar / İstatistikler */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .card h3 {
+            font-size: 14px;
+            color: #8b949e;
+            margin-bottom: 10px;
+        }
+
+        .card .value {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        /* İşlem Tablosu veya Sipariş Alanı */
+        .data-section {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .data-section h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .btn-action {
+            background-color: #238636;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .btn-action:hover {
+            background-color: #2ea44f;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Yan Menü -->
+    <div class="sidebar">
+        <div class="logo">Hondershop</div>
+        <a href="#" class="menu-item active">Ana Sayfa</a>
+        <a href="#" class="menu-item">Siparişler</a>
+        <a href="#" class="menu-item">Bakiye Yükle</a>
+        <a href="#" class="menu-item">Destek Talebi</a>
+        <a href="#" class="menu-item">Ayarlar</a>
+    </div>
+
+    <!-- Ana İçerik -->
+    <div class="main-content">
+        <div class="header">
+            <h1>Yönetim Paneli</h1>
+            <div class="user-profile">Hoş geldin, <strong>Kullanıcı</strong></div>
+        </div>
+
+        <!-- İstatistik Kartları -->
+        <div class="dashboard-grid">
+            <div class="card">
+                <h3>Güncel Bakiye</h3>
+                <div class="value">0.00 ₼</div>
+            </div>
+            <div class="card">
+                <h3>Tamamlanan Siparişler</h3>
+                <div class="value">0</div>
+            </div>
+            <div class="card">
+                <h3>Aktif Destek Talepleri</h3>
+                <div class="value">0</div>
+            </div>
+        </div>
+
+        <!-- İşlem Yapma Alanı -->
+        <div class="data-section">
+            <h2>Yeni İşlem Başlat</h2>
+            <p style="margin-bottom: 15px; color: #8b949e;">Hondershop paneli üzerinden işlemlerinizi hızlıca gerçekleştirebilirsiniz.</p>
+            <button class="btn-action">İşlemleri Görüntüle</button>
+        </div>
+    </div>
+
+</body>
+</html>
